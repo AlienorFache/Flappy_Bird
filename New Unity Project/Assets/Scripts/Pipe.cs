@@ -9,6 +9,6 @@ public class Pipe : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.position -= Vector3.right / m_speed;
+        transform.Translate(Vector3.left * m_speed * Time.deltaTime);
     }
 }

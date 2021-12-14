@@ -5,6 +5,7 @@ using UnityEngine;
 public class UImanager : MonoBehaviour
 {
     [SerializeField] public GameObject m_gameOverPanel;
+    [SerializeField] public GameObject m_gameSarterPanel;
 
     // Start is called before the first frame update
     void Start()
@@ -12,8 +13,18 @@ public class UImanager : MonoBehaviour
         m_gameOverPanel.gameObject.SetActive(false);
     }
 
- public void GameOver()
+    public void GameStart()
+    {
+        m_gameSarterPanel.gameObject.SetActive(false);
+    }
+    
+    public void GameOver()
     {
         m_gameOverPanel.gameObject.SetActive(true);
+    }
+    
+    public void Play()
+    {
+        m_gameOverPanel.gameObject.SetActive(false);
     }
 }

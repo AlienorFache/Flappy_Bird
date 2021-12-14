@@ -8,8 +8,9 @@ public class Killer : MonoBehaviour
     {
         if (p_collision.GetComponent<Player>() != null)
         {
-            p_collision.gameObject.SetActive(false);
+            FindObjectOfType<GameManager>().GameOver();
             FindObjectOfType<UImanager>().GameOver();
+            FindObjectOfType<PipeGenerator>().StopInvoke();
         }
     }
 }
